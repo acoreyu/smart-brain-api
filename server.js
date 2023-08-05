@@ -9,9 +9,6 @@ const db = knex({
     connection: {
       connectionString: process.env.DATABASE_URL,
       ssl: true,
-      // user : 'postgres',
-      // password : '1234',
-      // database : 'smart-brain'
     }
   });
 
@@ -103,5 +100,5 @@ app.get('/profile/:id', (req, res) => {
       })
 
 app.listen(process.env.PORT || 3000, ()=> {
-    console.log('app is running on port {process.env.PORT}');
+    console.log(`app is running on port ${process.env.PORT}`);
 })
